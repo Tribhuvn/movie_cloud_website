@@ -1,0 +1,94 @@
+{% extends 'Movies/base.html' %}
+{% load static %}
+{% block body_block %}
+<main class="content">
+    <section class="panel">
+        <h2>Recently Added</h2>
+        <div class="recentslider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for movie in recently_added  %}
+                        <div class="swiperide"><a href="single.html"><img src="{{movie.image.url}}"><h3 class="hometitle">{{movie.title}}</h3></a></div>
+                    {% endfor %}
+                    <!---div class="swiper-slide"><a href="single.html"><img src="image/8.jpg"><h3 class="movietitle"></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/7.jpg"><h3 class="movietitle"></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/5.jpg"><h3 class="movietitle"></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/4.jpg"><h3 class="movietitle"></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class="movietitle"></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class="movietitle"></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class="movietitle"></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class="movietitle"></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div---->
+
+                    <div class="swiper-slide"><a href="mostwatched.html"><img src="img/others.png"></a></div>
+                </div>
+                <div class="nextdirection recent-next"><img src="{% static 'images/rightarrow2' %}"></div>
+                <div class="leftdirection recent-prev"><img src="{% static 'images/leftarrow' %}"></div>
+            </div>
+        </div>
+    </section>
+    <section class="panel">
+        <h2>Most Watched</h2>
+        <div class="recentslider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for movie in most_watched  %}
+                        <div class="swiper-slide"><a href="single.html"><img src="{{movie.image.url}}"><h3 class="hometitle">{{movie.title}}</h3></a></div>
+                    {% endfor %}
+                    <!----div class="swiper-slide"><a href="single.html"><img src="image/8.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/7.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/5.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/4.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div---->
+                    
+                    <div class="swiper-slide"><a href="mostwatched.html"><img src="img/others.png"></a></div>
+                </div>
+                <div class="nextdirection most-next"><img src="{% static 'images/rightarrow2' %}"></div>
+                <div class="leftdirection most-prev"><img src="{% static 'images/leftarrow' %}"></div>
+                <!---Add Pagination-->
+            </div>
+        </div>
+    </section>
+    <section class="panel">
+        <h2>Top Rated</h2>
+        <div class="recentslider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for movie in top_rated  %}
+                    <div class="swiper-slide"><a href="single.html"><img src="{{movie.image.url}}"><h3 class="hometitle">{{movie.title}}</h3></a></div>
+
+                    {% endfor %}
+                    
+                    <!----div class="swiper-slide"><a href="single.html"><img src="image/8.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/7.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/5.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/4.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div>
+                    <div class="swiper-slide"><a href="single.html"><img src="image/9.jpg"><h3 class=></h3></a></div---->
+                    
+                    <div class="swiper-slide"><a href="mostwatched.html"><img src="img/others.png"></a></div>
+                </div>
+                <div class="nextdirection top-next"><img src="{% static 'images/rightarrow2' %}"></div>
+                <div class="leftdirection top-prev"><img src="{% static 'images/leftarrow' %}"></div>
+                <!---Add Pagination-->
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+{% endblock %}
